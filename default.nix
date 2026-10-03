@@ -20,8 +20,10 @@ stdenv.mkDerivation {
   runHook preInstall
 
   mkdir -p $out/bin
+  mkdir -p $out/share
 
   install -D -m 755 build/${pname} $out/bin/${pname}
+  cp -r data $out/share/${pname}
 
   runHook postInstall
   '';
