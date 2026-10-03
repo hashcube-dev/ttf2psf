@@ -26,6 +26,7 @@
           };
         }
       );
+      overlays.ttf2psf = (self: super: { ttf2psf = self.packages.x86_64-linux.default; });
       devShells = eachSystem (
         system:
         let
